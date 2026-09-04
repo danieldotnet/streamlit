@@ -17,11 +17,13 @@ def valid_iban(iban):
     return int(_number_iban(iban)) % 97 == 1
 
 
-if __name__ == '__main__':
-    my_iban = st.chat_input("Set IBAN: ")
+# Nicht in `if __name__ == '__main__':` wrappen
+my_iban = st.chat_input("Set IBAN: ")
+
+if my_iban:  # ✅ Null-Check
     my_iban = my_iban.replace(" ", "")
 
     if generate_iban_check_digits(my_iban) == my_iban[2:4] and valid_iban(my_iban):
-        print('IBAN ok!\n')
+        st.success('✅ IBAN ok!')
     else:
-        print('IBAN not ok!\n')
+        st.error('❌ IBAN not ok!')
