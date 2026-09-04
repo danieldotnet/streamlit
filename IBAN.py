@@ -1,4 +1,5 @@
 import string
+import streamlit as st
 
 LETTERS = {ord(d): str(i) for i, d in enumerate(string.digits + string.ascii_uppercase)}
 
@@ -17,7 +18,7 @@ def valid_iban(iban):
 
 
 if __name__ == '__main__':
-    my_iban = input("Set IBAN: ")  # 'RO13RZBR0000060007134800'
+    my_iban = st.chat_input("Set IBAN: ")
     my_iban = my_iban.replace(" ", "")
 
     if generate_iban_check_digits(my_iban) == my_iban[2:4] and valid_iban(my_iban):
