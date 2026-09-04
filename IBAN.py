@@ -9,21 +9,28 @@ def _number_iban(iban):
 
 
 def generate_iban_check_digits(iban):
+    if len(iban) < 4:
+        return None
     number_iban = _number_iban(iban[:2] + '00' + iban[4:])
     return '{:0>2}'.format(98 - (int(number_iban) % 97))
 
 
 def valid_iban(iban):
-    return int(_number_iban(iban)) % 97 == 1
+    if len(iban) < 15:  # Minimale IBAN-Länge
+        return False
+    try:
+        return int(_number_iban(iban)) % 97 == 1
+    except:
+        return False
 
 
-# Nicht in `if __name__ == '__main__':` wrappen
 my_iban = st.chat_input("Set IBAN: ")
 
-if my_iban:  # ✅ Null-Check
-    my_iban = my_iban.replace(" ", "")
+if my_iban:
+    my_iban = my_iban.replace(" ", "").upper()
 
-    if generate_iban_check_digits(my_iban) == my_iban[2:4] and valid_iban(my_iban):
+    check_digits = generate_iban_check_digits(my_iban)
+    if check_digits and check_digits == my_iban[2:4] and valid_iban(my_iban):
         st.success('✅ IBAN ok!')
     else:
         st.error('❌ IBAN not ok!')
