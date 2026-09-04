@@ -1,6 +1,19 @@
 import string
 import streamlit as st
 
+# Custom CSS, um das GitHub-Icon auszublenden
+hide_github_icon = """
+    <style>
+    #GithubIcon {
+        visibility: hidden;
+    }
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK {
+        display: none !important;
+    }
+    </style>
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 LETTERS = {ord(d): str(i) for i, d in enumerate(string.digits + string.ascii_uppercase)}
 
 
