@@ -1,0 +1,133 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="annotated-types" />
+          <option value="anyio" />
+          <option value="arrow" />
+          <option value="asttokens" />
+          <option value="async-generator" />
+          <option value="attrs" />
+          <option value="beautifulsoup4" />
+          <option value="breadability" />
+          <option value="certifi" />
+          <option value="chardet" />
+          <option value="charset-normalizer" />
+          <option value="click" />
+          <option value="contourpy" />
+          <option value="cryptography" />
+          <option value="curl_cffi" />
+          <option value="cycler" />
+          <option value="decorator" />
+          <option value="deep-translator" />
+          <option value="deepl" />
+          <option value="distro" />
+          <option value="docopt" />
+          <option value="ephem" />
+          <option value="et-xmlfile" />
+          <option value="executing" />
+          <option value="finnhub-python" />
+          <option value="fonttools" />
+          <option value="google-api-core" />
+          <option value="google-auth" />
+          <option value="google-cloud" />
+          <option value="google-cloud-core" />
+          <option value="google-cloud-translate" />
+          <option value="googleapis-common-protos" />
+          <option value="greenlet" />
+          <option value="grpc-google-iam-v1" />
+          <option value="grpcio" />
+          <option value="grpcio-status" />
+          <option value="h11" />
+          <option value="httpcore" />
+          <option value="httplib2" />
+          <option value="httpx" />
+          <option value="ics" />
+          <option value="idna" />
+          <option value="importlib_metadata" />
+          <option value="ipython" />
+          <option value="jedi" />
+          <option value="Jinja2" />
+          <option value="jiter" />
+          <option value="joblib" />
+          <option value="kiwisolver" />
+          <option value="libretranslatepy" />
+          <option value="lxml" />
+          <option value="MarkupSafe" />
+          <option value="matplotlib" />
+          <option value="matplotlib-inline" />
+          <option value="mypy_extensions" />
+          <option value="nltk" />
+          <option value="numpy" />
+          <option value="openai" />
+          <option value="openpyxl" />
+          <option value="outcome" />
+          <option value="packaging" />
+          <option value="pandas" />
+          <option value="parso" />
+          <option value="peewee" />
+          <option value="pillow" />
+          <option value="platformdirs" />
+          <option value="playwright" />
+          <option value="prompt-toolkit" />
+          <option value="proto-plus" />
+          <option value="protobuf" />
+          <option value="pure-eval" />
+          <option value="pyasn1" />
+          <option value="pyasn1_modules" />
+          <option value="pycountry" />
+          <option value="pydantic" />
+          <option value="pydantic_core" />
+          <option value="pyee" />
+          <option value="Pygments" />
+          <option value="pyparsing" />
+          <option value="pypiwin32" />
+          <option value="PySocks" />
+          <option value="python-dateutil" />
+          <option value="pytube" />
+          <option value="pytz" />
+          <option value="pywin32" />
+          <option value="regex" />
+          <option value="rsa" />
+          <option value="seaborn" />
+          <option value="selenium" />
+          <option value="setuptools" />
+          <option value="six" />
+          <option value="sniffio" />
+          <option value="sortedcontainers" />
+          <option value="soupsieve" />
+          <option value="stack-data" />
+          <option value="sumy" />
+          <option value="TatSu" />
+          <option value="tqdm" />
+          <option value="traitlets" />
+          <option value="translate" />
+          <option value="trio" />
+          <option value="trio-typing" />
+          <option value="trio-websocket" />
+          <option value="types-certifi" />
+          <option value="types-python-dateutil" />
+          <option value="types-urllib3" />
+          <option value="tzdata" />
+          <option value="urllib3" />
+          <option value="wcwidth" />
+          <option value="websocket-client" />
+          <option value="wheel" />
+          <option value="wsproto" />
+          <option value="XlsxWriter" />
+          <option value="yfinance" />
+          <option value="zipp" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pandas" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
