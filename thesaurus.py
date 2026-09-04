@@ -13,7 +13,6 @@ try:
 
         for i in wjdata["synsets"][0]["terms"]:
             st.write(i["term"])
-        print('')
 
 except:
     pass
