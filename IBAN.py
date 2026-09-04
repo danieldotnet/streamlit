@@ -9,28 +9,38 @@ def _number_iban(iban):
 
 
 def generate_iban_check_digits(iban):
-    if len(iban) < 4:
+    try:
+        if len(iban) < 4:
+            return None
+        number_iban = _number_iban(iban[:2] + '00' + iban[4:])
+        return '{:0>2}'.format(98 - (int(number_iban) % 97))
+    except ValueError:
         return None
-    number_iban = _number_iban(iban[:2] + '00' + iban[4:])
-    return '{:0>2}'.format(98 - (int(number_iban) % 97))
 
 
 def valid_iban(iban):
-    if len(iban) < 15:  # Minimale IBAN-Länge
-        return False
     try:
+        if len(iban) < 15:
+            return False
         return int(_number_iban(iban)) % 97 == 1
-    except:
+    except (ValueError, IndexError, KeyError):
         return False
 
+
+st.title("IBAN Validator")
 
 my_iban = st.chat_input("Set IBAN: ")
 
 if my_iban:
     my_iban = my_iban.replace(" ", "").upper()
 
-    check_digits = generate_iban_check_digits(my_iban)
-    if check_digits and check_digits == my_iban[2:4] and valid_iban(my_iban):
-        st.success('✅ IBAN ok!')
+    if len(my_iban) < 15:
+        st.error(f"❌ IBAN zu kurz (mind. 15 Zeichen, hast {len(my_iban)})")
     else:
-        st.error('❌ IBAN not ok!')
+        check_digits = generate_iban_check_digits(my_iban)
+        is_valid = valid_iban(my_iban)
+
+        if check_digits and check_digits == my_iban[2:4] and is_valid:
+            st.success('✅ IBAN ok!')
+        else:
+            st.error('❌ IBAN not ok!')
